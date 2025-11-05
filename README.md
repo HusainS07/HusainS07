@@ -7,7 +7,7 @@
 ### 🌟 About Me  
 - Developing **RAG-based AI systems** and **real-time full-stack applications**  
 - Currently exploring **LangChain**, **FastAPI**, and **AI microservices**  
-- Experienced with **Next.js**, **React**, **Node.js**, **MongoDB**, and **Scikit-learn**  
+- Experienced with **Next.js**, **React**, **Node.js**, **MongoDB**, **MySQL**, and **Scikit-learn**  
 - Reach me at **mhs.sakarwala@gmail.com**  
 - Fun fact: Debugging feels easier after coffee ☕  
 
@@ -35,6 +35,7 @@
   <img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node-dot-js&logoColor=white" />
   <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" />
   <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" />
+  <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" />
   <img src="https://img.shields.io/badge/LangChain-000000?style=for-the-badge&logo=chainlink&logoColor=white" />
   <img src="https://img.shields.io/badge/Scikit--learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white" />
   <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
@@ -45,14 +46,14 @@
 
 ---
 
-### 🚀 Featured Projects  
-- 🅿️ **[Smart Parking System](https://github.com/HusainS07/smart_parking_book_system)**  
+###  Featured Projects  
+-  **[Smart Parking System](https://github.com/HusainS07/smart_parking_book_system)**  
   RAG-powered smart parking application with **real-time slot management**, **Razorpay integration**, and **AI-driven support**.  
 
-- 🧠 **[Cybersecurity Threat Detection System](https://github.com/Shree21941/Phishing-Detect)**  
+-  **[Cybersecurity Threat Detection System](https://github.com/Shree21941/Phishing-Detect)**  
   Machine learning–based **phishing and malware detection** achieving 95% accuracy using **Random Forest**.  
 
-- 🍎 **[AI Fitness & Nutrition Coach](https://github.com/HusainS07/ai-fitness-nutrition-coach)**  
+-  **[AI Fitness & Nutrition Coach](https://github.com/HusainS07/ai-fitness-nutrition-coach)**  
   Built with **DeepSeek R1**, **LangChain**, and **Next.js** for personalized health tracking and chatbot interaction.  
 
 ---
