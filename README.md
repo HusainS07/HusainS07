@@ -1,4 +1,4 @@
-## Hi 👋, I'm Husain Sakarwala  
+<h2 align="center">👋 Hi, I'm Husain Sakarwala</h2> 
 🎓 Computer Engineering student at **VJTI, Mumbai**  
 💻 Focused on **AI**, **Machine Learning**, and **Full-Stack Development**
 
