@@ -23,40 +23,44 @@
 
 **🔴 Redis & Concurrent Booking Systems**
 
-[smart_parking_book_system](https://github.com/HusainS07/smart_parking_book_system) | Redis, Node.js
+[smart_parking_book_system](https://github.com/HusainS07/smart_parking_book_system) | Next.js, PostgreSQL, Upstash Redis
 
-**The Problem:** What happens when 100 users book the last parking slot simultaneously? Without proper synchronization, you get double-bookings, oversold inventory, and angry customers.
+**The Problem:** Thousands of users booking limited parking slots simultaneously. Without proper synchronization, double-bookings and race conditions destroy data integrity. Standard databases alone can't handle millisecond-level concurrency.
 
 **Our Approach:**
-- Used Redis transactions with Lua scripts to guarantee atomic slot allocation
-- Implemented distributed locking to prevent race conditions across multiple server instances
-- Real-time inventory sync using Redis pub/sub for instant slot updates across the system
-- Optimistic locking patterns to maximize throughput without sacrificing consistency
+- ACID transaction booking using PostgreSQL to prevent race conditions
+- Upstash Redis for serverless edge-level rate limiting (10 attempts per 15 min per IP)
+- Transaction-safe slot booking flow with database locking
+- Client-side caching to eliminate redundant queries
+- Parameterized SQL queries to prevent injection attacks
 
 **Results:**
-- ✅ Zero double-bookings even under 1000+ concurrent requests
-- ✅ Sub-10ms response times for slot reservation
-- ✅ 99.9% transaction success rate in production testing
+- ✅ Zero double-bookings under concurrent load
+- ✅ OWASP-hardened: 100% parameterized queries, edge brute-force protection, IDOR safeguards
+- ✅ Secure admin dashboard with role-based access control
 
 ---
 
 **🤖 RAG with LLM Evaluation**
 
-[RAG_S_PARK](https://github.com/HusainS07/RAG_S_PARK) | LangChain, Python
+[RAG_S_PARK](https://github.com/HusainS07/RAG_S_PARK) | FastAPI, Pinecone, OpenRouter, Llama 3.3
 
-**The Problem:** Most RAG systems just retrieve documents and feed them to an LLM—nobody validates if the AI actually answers correctly. Users get confident-sounding but completely hallucinated responses.
+**The Problem:** Most RAG systems skip validation. They retrieve documents and feed them to an LLM without checking if the answer is actually correct. Users get confident-sounding hallucinations.
 
 **Our Approach:**
-- Built evaluation layer using RAGAS metrics (context precision, context recall, faithfulness)
-- Implemented response validation: relevance score, coherence check, factuality verification
-- Integrated vector databases for semantic retrieval with confidence thresholds
-- Feedback loops to reject low-scoring responses before returning to users
+- Pinecone vector database for high-efficiency semantic retrieval with adaptive top-K scanning
+- FastAPI asynchronous backend with health monitoring and debug endpoints
+- Multi-phase evaluation (Simple, Medium, Complex) across 150 curated questions
+- LLM-Judge scoring: Faithfulness, Answer Relevancy, Context Recall, Context Precision
+- Deterministic statistical scoring: ROUGE-L, BERTScore, Cosine Similarity
 
-**Metrics & Results:**
-- ✅ Faithfulness score: 94% (responses grounded in source documents)
-- ✅ Context precision: 92% (retrieved documents actually answer the query)
-- ✅ Hallucination reduction: 87% fewer false claims vs baseline
-- ✅ Average response quality score: 8.7/10 (validated across 500+ test queries)
+**Evaluation Metrics (150 Test Questions):**
+- ✅ **Overall Score:** 0.838/1.0
+- ✅ **Faithfulness:** 0.818 (answers grounded in source documents)
+- ✅ **Answer Relevancy:** 0.888 (responses directly address queries)
+- ✅ **Context Precision:** 0.915 (retrieved docs are highly relevant)
+- ✅ **Context Recall:** 0.736 (comprehensive context coverage)
+- ✅ **BERTScore F1:** 0.777 (semantic similarity with ground truth)
 
 ---
 
