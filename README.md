@@ -2,15 +2,16 @@
 
 <p align="center">
   🎓 Computer Engineering @ <b>VJTI, Mumbai</b><br>
-  💻 Full-Stack Developer | AI/ML Engineer | Robotics Enthusiast
+  💻 Full-Stack Developer | AI/ML Engineer | Robotics Enthusiast<br>
+  🏆 <b>Grand Finalist, Smart India Hackathon 2025</b>
 </p>
 
 ---
 
 ### 🔧 What I Do
 
-- **🔴 Redis & Concurrent Systems** – High-performance booking systems, distributed caching
-- **🤖 RAG with LLM Evaluation** – Building reliable AI systems with LangChain
+- **🔴 Redis & Concurrent Booking Systems** – Solving race conditions and high-concurrency challenges using distributed caching and atomic operations for real-time slot management
+- **🤖 RAG with LLM Evaluation** – Building production-grade retrieval-augmented generation pipelines with RAGAS/DeepEval frameworks to ensure reliability and accuracy in AI responses
 - **⚡ Next.js & React** – Full-stack web applications
 - **🔐 ML Cybersecurity** – Phishing detection, malware classification
 - **🤖 Robotics & IoT** – ESP32 firmware, embedded systems
@@ -18,12 +19,28 @@
 
 ---
 
-### 💼 Featured Projects
+### 💼 Deep Dives
+
+**🔴 Redis & Concurrent Booking Systems**
+
+[smart_parking_book_system](https://github.com/HusainS07/smart_parking_book_system) | Redis, Node.js
+
+Solved the concurrent booking problem using Redis distributed caching. High-concurrency scenarios demand atomic operations to prevent double-booking. The system uses Redis transactions and Lua scripts to ensure slot consistency across simultaneous users, implements real-time inventory synchronization, and applies optimistic locking patterns for reliable transactions even under peak load.
+
+---
+
+**🤖 RAG with LLM Evaluation**
+
+[RAG_S_PARK](https://github.com/HusainS07/RAG_S_PARK) | LangChain, Python
+
+Built production-grade retrieval-augmented generation with built-in evaluation. Rather than blindly returning LLM outputs, the system validates responses for factual accuracy, relevance, and coherence using RAGAS/DeepEval frameworks. Integrated vector databases for semantic search, implemented evaluation metrics to measure retrieval quality, and designed feedback loops to prevent hallucinations—making RAG systems genuinely reliable.
+
+---
+
+### 📁 Other Projects
 
 | Project | Tech | Description |
 |---------|------|-------------|
-| [smart_parking_book_system](https://github.com/HusainS07/smart_parking_book_system) | Redis, Node.js | Real-time concurrent booking with distributed caching |
-| [RAG_S_PARK](https://github.com/HusainS07/RAG_S_PARK) | LangChain, Python | Reliable RAG pipelines with evaluation |
 | [ai-fitness-nutrition-coach](https://github.com/HusainS07/ai-fitness-nutrition-coach) | LangChain, Next.js | AI chatbot with personalized coaching |
 | [PORTFOLIO](https://github.com/HusainS07/PORTFOLIO) | Next.js, React | Professional web showcase |
 | [Phishing-Detect](https://github.com/Shree21941/Phishing-Detect) | Scikit-learn, Python | ML-based threat detection (95%+ accuracy) |
